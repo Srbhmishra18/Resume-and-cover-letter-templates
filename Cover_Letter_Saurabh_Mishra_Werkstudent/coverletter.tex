@@ -1,0 +1,128 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight the section with an awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle, edge/noedge ,left/right
+\name{Saurabh}{Mishra}
+\position{Data Analyst}
+\address{Völklingen, Germany}
+\mobile{(+49) 1775511343}
+\email{srbhmishra18@gmail.com}
+\homepage{www.srbhmishra18.github.io/Portfolio/}
+\github{Srbhmishra18}
+\linkedin{1997-saurabh-mishra}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+%\recipient
+ % {Westwing Recruitment Team}
+  %{Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Werkstudent Data Science and Machine Learning}
+% How the letter is opened
+\letteropening{Dear Hiring Team at Muhr und Bender KG,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with the above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Saurabh Mishra~~~·~~~Cover Letter}
+  {}
+% Print the title with the above letter informations
+
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+I am writing to apply for the Werkstudent Data Science und Machine Learning (m/w/d) position in Attendorn.
+\lettersection{About Me}
+I am a Data Analyst with over four years of experience, currently enrolled as a Master's student in Natural Language Processing at Trier University (graduating 2027). I specialize in SQL-based analysis, ETL workflows, KPI design, and automated reporting using Power BI. I have been working as a Data Analyst (Werkstudent) at Husqvarna Group since April 2024, where I design ETL workflows, build Power BI dashboards with star-schema data models, and create KPI reporting frameworks used by senior operations stakeholders. I also hold the Microsoft Power BI Data Analyst Associate certification (PL-300) and have a strong foundation in SQL, Python, and automated reporting. My background bridges technical data engineering and business-facing analytics, translating raw operational data into reliable, decision-ready insights.
+
+\lettersection{Why Ninox and This Particular Job?}
+I am truly excited about Ninox as Europe’s leading low-code platform and the central role data plays in shaping your product roadmap and business decisions. The Junior Analytics Engineer role, building SQL-powered dashboards for Product, Marketing, Finance and leadership, improving data models, and supporting user-behaviour analytics, perfectly matches my passion for turning complex operational data into clear, actionable insights in a fast-growing SaaS environment. I am very keen to contribute to your modern BI stack in Berlin.
+
+\lettersection{Why Me?}
+I bring a strong foundation in SQL, Power BI, and data modeling, combined with practical experience in automating reporting and delivering insights to stakeholders. My academic background, complemented by hands-on industry exposure, allows me to quickly adapt to complex data environments. I am detail-oriented, proactive, and comfortable working in structured, high-performance teams, qualities that align well with the expectations of this role.
+
+I would welcome the opportunity to contribute to your team and further develop my skills in a practical machine learning environment.
+
+\end{cvletter}
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above the letter informations
+\makeletterclosing
+
+\end{document}
