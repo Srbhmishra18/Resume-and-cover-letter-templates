@@ -153,8 +153,10 @@
 \setbool{acvSectionColorHighlight}{true}
 
 % Awesome section color
-\def\@sectioncolor#1#2#3{%
-  \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
+\def\@sectioncolor#1 #2\@nil{%
+  \ifbool{acvSectionColorHighlight}%
+    {{\color{awesome}#1}\ifx\relax#2\relax\else\space#2\fi}%
+    {#1\ifx\relax#2\relax\else\space#2\fi}%
 }
 
 
@@ -196,10 +198,10 @@
 \newcommand*{\headerlastnamestyle}[1]{{\acvfontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\acvfontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\acvfontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\acvfontsize{6.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\acvfontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\acvfontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\acvfontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\acvfontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor#1 \@nil}}
 \newcommand*{\subsectionstyle}[1]{{\acvfontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\acvfontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -228,7 +230,7 @@
 \newcommand*{\skillsetstyle}[1]{{\acvfontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
-\newcommand*{\lettersectionstyle}[1]{{\acvfontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\lettersectionstyle}[1]{{\acvfontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor#1 \@nil}}
 \newcommand*{\recipientaddressstyle}[1]{{\acvfontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\acvfontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\acvfontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
